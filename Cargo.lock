@@ -320,18 +320,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e955d55380bbd2ca883b4426fb1483e61f06fe65c8b377d5d4bceeb03ecf07bb"
 dependencies = [
  "cacache",
- "ckb-constant",
+ "ckb-constant 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-crypto",
  "ckb-dao-utils",
- "ckb-error",
- "ckb-hash",
- "ckb-jsonrpc-types",
+ "ckb-error 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-jsonrpc-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-logger",
  "ckb-pow",
- "ckb-rational",
+ "ckb-rational 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-resource",
- "ckb-traits",
- "ckb-types",
+ "ckb-traits 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "serde",
  "toml",
 ]
@@ -346,10 +346,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "ckb-channel"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "crossbeam-channel",
+]
+
+[[package]]
 name = "ckb-constant"
 version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5baf91b16a3b8360c85211dfdff3d2adc0a1f3ae571ea6b1637d55d6b227e312"
+
+[[package]]
+name = "ckb-constant"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
 
 [[package]]
 name = "ckb-crypto"
@@ -357,7 +370,7 @@ version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5e2094270f5632808cbff1c37a37ffb9b3e79f7a99e78927fb228d8c343793eb"
 dependencies = [
- "ckb-fixed-hash",
+ "ckb-fixed-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "faster-hex",
  "lazy_static",
  "rand 0.7.3",
@@ -372,8 +385,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "6eb3606c602a424098317bfde4b7d6427d4fe5dfe1a6d4ebc831ce0308508085"
 dependencies = [
  "byteorder",
- "ckb-error",
- "ckb-types",
+ "ckb-error 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -383,10 +396,10 @@ dependencies = [
  "ckb-chain-spec",
  "ckb-debugger-api",
  "ckb-gdb-remote-protocol",
- "ckb-hash",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-mock-tx-types",
  "ckb-script",
- "ckb-types",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-vm",
  "ckb-vm-debug-utils",
  "ckb-vm-pprof",
@@ -410,11 +423,11 @@ version = "0.116.1"
 dependencies = [
  "byteorder",
  "ckb-chain-spec",
- "ckb-hash",
- "ckb-jsonrpc-types",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-jsonrpc-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-mock-tx-types",
  "ckb-script",
- "ckb-types",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-vm",
  "hex",
  "regex 1.9.5",
@@ -431,7 +444,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "01041f8a1d7eeaf85caca3547bb78d929d6a4d62774509d7eb438b6bc310ba30"
 dependencies = [
  "anyhow",
- "ckb-occupied-capacity",
+ "ckb-occupied-capacity 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "derive_more",
+ "thiserror",
+]
+
+[[package]]
+name = "ckb-error"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "anyhow",
+ "ckb-occupied-capacity 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "derive_more",
  "thiserror",
 ]
@@ -442,8 +466,17 @@ version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4a7491f18717b84827923935cc5adb1bcdf9c924e377b478d089f4694e7c779b"
 dependencies = [
- "ckb-fixed-hash-core",
- "ckb-fixed-hash-macros",
+ "ckb-fixed-hash-core 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-fixed-hash-macros 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "ckb-fixed-hash"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-fixed-hash-core 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-fixed-hash-macros 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
 ]
 
 [[package]]
@@ -459,12 +492,34 @@ dependencies = [
 ]
 
 [[package]]
+name = "ckb-fixed-hash-core"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb_schemars",
+ "faster-hex",
+ "serde",
+ "thiserror",
+]
+
+[[package]]
 name = "ckb-fixed-hash-macros"
 version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fdd89533a5da746f50798752a46f5f084f110c849335be94baf506790ebee931"
 dependencies = [
- "ckb-fixed-hash-core",
+ "ckb-fixed-hash-core 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "proc-macro2",
+ "quote 1.0.33",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "ckb-fixed-hash-macros"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-fixed-hash-core 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "proc-macro2",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -496,10 +551,24 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7a0f2d0f4224507a027d25d64824dd0dc8d367c8b5bead30289eaffe1381a7fb"
 dependencies = [
  "cfg-if 1.0.0",
- "ckb-error",
- "ckb-fixed-hash",
- "ckb-hash",
- "ckb-occupied-capacity",
+ "ckb-error 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-fixed-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-occupied-capacity 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "molecule",
+ "numext-fixed-uint",
+]
+
+[[package]]
+name = "ckb-gen-types"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "cfg-if 1.0.0",
+ "ckb-error 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-fixed-hash 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-hash 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-occupied-capacity 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "molecule",
  "numext-fixed-uint",
 ]
@@ -515,12 +584,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "ckb-hash"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "blake2b-ref",
+ "blake2b-rs",
+]
+
+[[package]]
 name = "ckb-jsonrpc-types"
 version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ef7e123043ca3701cf05ba4c3699b34f3b179609109a4c8c3afa68922f722be7"
 dependencies = [
- "ckb-types",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb_schemars",
+ "faster-hex",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "ckb-jsonrpc-types"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-types 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "ckb_schemars",
  "faster-hex",
  "serde",
@@ -549,9 +639,9 @@ dependencies = [
 name = "ckb-mock-tx-types"
 version = "0.116.1"
 dependencies = [
- "ckb-jsonrpc-types",
- "ckb-traits",
- "ckb-types",
+ "ckb-jsonrpc-types 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-traits 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-types 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "serde",
 ]
 
@@ -561,8 +651,17 @@ version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ee4aa07af7cec38d15cfe4c1ce150514fba5a4e78996bbbd098982106bee7d8d"
 dependencies = [
- "ckb-occupied-capacity-core",
- "ckb-occupied-capacity-macros",
+ "ckb-occupied-capacity-core 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-occupied-capacity-macros 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "ckb-occupied-capacity"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-occupied-capacity-core 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-occupied-capacity-macros 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
 ]
 
 [[package]]
@@ -575,12 +674,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "ckb-occupied-capacity-core"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "ckb-occupied-capacity-macros"
 version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9a6aae3f1f8d194cd5bd4328c9c7281f0d7acc73976b2771576cdc06a9ed608f"
 dependencies = [
- "ckb-occupied-capacity-core",
+ "ckb-occupied-capacity-core 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "quote 1.0.33",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "ckb-occupied-capacity-macros"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-occupied-capacity-core 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "quote 1.0.33",
  "syn 1.0.109",
 ]
@@ -592,8 +709,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "eb981de6e56107cd3e1660a9105bb07891277b21604946f70bf5097dd03690f7"
 dependencies = [
  "byteorder",
- "ckb-hash",
- "ckb-types",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "eaglesong",
  "log 0.4.20",
  "serde",
@@ -610,13 +727,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "ckb-rational"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "numext-fixed-uint",
+ "serde",
+]
+
+[[package]]
 name = "ckb-resource"
 version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d482493fabf4ce3670277d7dbaa5811872379535031431dc6b19699722c7b846"
 dependencies = [
  "ckb-system-scripts",
- "ckb-types",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "includedir",
  "includedir_codegen",
  "phf",
@@ -632,10 +758,10 @@ checksum = "a2d6528e95a0f93d4a39e569b1ffffd60cbb0a9ae8f1c96dd465e2576ad510a9"
 dependencies = [
  "byteorder",
  "ckb-chain-spec",
- "ckb-error",
- "ckb-hash",
- "ckb-traits",
- "ckb-types",
+ "ckb-error 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-traits 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-vm",
  "faster-hex",
  "serde",
@@ -660,7 +786,15 @@ version = "0.116.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c528f704f3088ec2dd467d374920b64b2bbb9ed9c4e8e12931c069a99150d8bc"
 dependencies = [
- "ckb-types",
+ "ckb-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "ckb-traits"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "ckb-types 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
 ]
 
 [[package]]
@@ -671,15 +805,40 @@ checksum = "9b05cc1c6aab0c40b323b233617b67860f9d679fac431a34d1f1b0853d700e9d"
 dependencies = [
  "bit-vec",
  "bytes",
- "ckb-channel",
- "ckb-constant",
- "ckb-error",
- "ckb-fixed-hash",
- "ckb-gen-types",
- "ckb-hash",
+ "ckb-channel 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-constant 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-error 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-fixed-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-gen-types 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-hash 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
  "ckb-merkle-mountain-range",
- "ckb-occupied-capacity",
- "ckb-rational",
+ "ckb-occupied-capacity 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "ckb-rational 0.116.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "derive_more",
+ "golomb-coded-set",
+ "merkle-cbt",
+ "molecule",
+ "numext-fixed-uint",
+ "once_cell",
+ "paste",
+]
+
+[[package]]
+name = "ckb-types"
+version = "0.116.1"
+source = "git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain#b6d1aae4c18d50233c32fb504cc2e46923ee602b"
+dependencies = [
+ "bit-vec",
+ "bytes",
+ "ckb-channel 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-constant 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-error 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-fixed-hash 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-gen-types 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-hash 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-merkle-mountain-range",
+ "ckb-occupied-capacity 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
+ "ckb-rational 0.116.1 (git+https://github.com/ethanyuan/ckb?branch=v0.116.1-branch-chain)",
  "derive_more",
  "golomb-coded-set",
  "merkle-cbt",
